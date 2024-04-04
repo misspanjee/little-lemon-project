@@ -5,8 +5,7 @@ import './App.css';
 import Header from './Components/Header';
 import Nav from './Components/Nav';
 import Menu from './Components/Menu';
-import Main from './Components/Main';
-import Footer from './Components/Footer';
+import Testimonials from './Components/Testimonials';
 
 function App() {
   return (
@@ -16,6 +15,7 @@ function App() {
         <Header/>
       </Router>
       <Menu/>
+      <Testimonials/>
     </>
   );
 }
