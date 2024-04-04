@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Nav from './Components/Nav';
 import Menu from './Components/Menu';
 import Testimonials from './Components/Testimonials';
+import About from './Components/About';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </Router>
       <Menu/>
       <Testimonials/>
+      <About/>
     </>
   );
 }
