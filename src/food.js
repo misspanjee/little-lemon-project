@@ -1,5 +1,5 @@
 import greekSaladImage from "./images/greek salad.jpg"
-import bruschettaImage from "./images/bruchetta.svg"
+import bruschettaImage from "./images/Bruschetta.jpg"
 import lemonDessertImage from "./images/lemon dessert.jpg"
 
 const food = [

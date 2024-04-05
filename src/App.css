@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+
 body{
   width: 100%;
   margin: 0 auto;
@@ -47,6 +50,10 @@ nav ul li a:hover{
   align-items: center;
 }
 
+.nav-links a {
+  font-family: 'Karla', sans-serif;
+}
+
 .nav-links.visible {
   flex-direction: column;
   position: absolute;
@@ -64,7 +71,7 @@ nav ul li a:hover{
 
 .hero {
   background-color: #495E57;
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .hero section {
@@ -73,20 +80,29 @@ nav ul li a:hover{
   position: relative;
 }
 
-h2 {
-  color: #F4CE14;
-  font-size: 40px;
+.herobanner {
+  margin-top: -85px;
 }
 
-h3 {
-  font-size: 25px;
+.herobanner h2 {
+  color: #F4CE14;
+  font-size: 80px;
+  font-family: 'Markazi Text', serif;
+  margin-bottom: 0;
+}
+
+.herobanner h3 {
+  font-size: 50px;
+  font-family: 'Markazi Text', serif;
+  margin: 0 0 0.5em;
 }
 
 .herobanner p {
   font-size: 20px;
+  font-family: 'Karla', sans-serif;
   max-width: 520px;
   line-height: 1.5;
-  margin-bottom: 30px;
+  margin-bottom: 3em;
 }
 
 button {
@@ -98,13 +114,14 @@ button {
   border-radius: 12px;
   font-size: 20px;
   font-weight: bold;
+  font-family: 'Karla', sans-serif;
   cursor: pointer;
 }
 
 .herobanner-image{
   position: absolute;
-  right: 13%;
-  top: 15%;
+  right: 10%;
+  top: 3.5%;
   width: 400px;
 }
 
@@ -154,15 +171,18 @@ input, label{
 /* Menu items */
 
 .specials-container{
-  margin: 110px auto;
+  margin: 50px auto;
   padding: 10px 13%;
 }
 
 .specials-container h2 {
   color: #000;
+  font-family: 'Markazi Text', serif;
+  font-size: 50px;
 }
 
 .specials-header{
+  margin-top: -40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,7 +190,7 @@ input, label{
 }
 
 .cards{
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -179,13 +199,28 @@ input, label{
 }
 
 .specials-items {
-  height: 450px;
+  height: 500px;
   width: 350px;
   background: #a9c8be;
   border-radius: 8px;
 
   .specials-content {
     padding: 5px 15px;
+    font-family: 'Karla', sans-serif;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .heading h5 {
+    font-size: 20px;
+  }
+
+  .heading p {
+    font-size: 20px;
   }
 
   .specials-content .heading{
@@ -195,7 +230,7 @@ input, label{
 
   .orderButton {
     padding: 5px 12px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-size: 16px;
     font-weight: 600;
   }
@@ -223,10 +258,12 @@ input, label{
 .testimonial-header {
   color: #F4CE14;
   font-size: 40px;
+  font-family: 'Markazi Text', serif;
+  margin-top: -70px;
 }
 
 .testimonial-cards{
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -242,10 +279,13 @@ input, label{
 
   .testimonial-content {
     padding: 10px 20px;
+    font-family: 'Karla', sans-serif;
   }
 
   .testimonial-content .heading {
+    margin-top: -20px;
     margin-bottom: 0%;
+    font-size: 20px;
   }
   .testimonial-content .review-text {
     font-size: 12px;
@@ -269,7 +309,7 @@ input, label{
 
 .about {
   background-color: white;
-  padding: 150px 0;
+  padding: 120px 0;
 }
 
 .about section {
@@ -280,20 +320,24 @@ input, label{
 
 .main-text h2 {
   color: black;
-  font-size: 40px;
+  font-size: 55px;
+  font-family: 'Markazi Text', serif;
+  margin-bottom: 0;
 }
 
 .main-text p {
   font-size: 20px;
+  font-family: 'Karla', sans-serif;
   max-width: 520px;
   line-height: 1.5;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
 .about-images{
   position: absolute;
   right: 13%;
-  top: 15%;
+  top: 18.5%;
   width: 400px;
 }
 .ownerPhoto1, .ownerPhoto2 {
@@ -320,25 +364,28 @@ input, label{
 
 
 /* Footer */
+
+footer {
+  border-top: 2px solid #495E57;
+}
+
 footer section{
-  padding: 10px 13%;
+  padding: 50px 13%;
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
 
-.company-info img{
+.second-logo img{
   margin-top: 12px;
   cursor: pointer;
   width: 200px;
 }
 
-.company-info p{
-  width: 320px;
-}
 
 footer h3{
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'Markazi Text', serif;
 }
 
 footer ul{
@@ -347,6 +394,7 @@ footer ul{
 
 footer ul li{
   padding: 8px 0;
+  font-family: 'Karla', sans-serif;
 }
 
 /*Mobile View*/
@@ -395,21 +443,52 @@ footer ul li{
     padding: 10px 8%;
   }
 
-  .menu-container{
+  .specials-container{
     margin: 20px 0;
   }
 
-  .menu-header{
+  .specials-header{
     justify-content: flex-start;
   }
 
-  .menu-items{
+  .specials-items{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .testimonial-container {
+    padding: 20px 0;
+  }
+
+  .testimonial-header {
+    justify-content: flex-start;
+  }
+
+  .testimonial-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about section, .main-text {
+    padding: 10px 8%;
+  }
+
+  .about-images .ownerPhoto1, .about-images .ownerPhoto2{
+    display: none !important;
   }
 
   footer section{
+    display: flex;
     padding: 10px 8%;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .company-info p{
