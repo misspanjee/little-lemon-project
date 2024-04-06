@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const BookingForm = (props) => {
     const [date, setDate] = useState("");
     const [times, setTimes] = useState("");
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
+    const [isFormValid, setIsFormValid] = useState(false);
+
+    useEffect(() => {
+        if (date && times && guests && occasion && !isNaN(guests)) {
+            setIsFormValid(true);
+        } else {
+            setIsFormValid(false);
+        }
+    }, [date, times, guests, occasion]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,8 +24,17 @@ const BookingForm = (props) => {
       setDate(e);
       props.dispatch(e);
     }
+    const handleGuestsChange = (e) => {
+        const value = e.target.value;
+        // Only update state if value is a number
+        if (!isNaN(value)) {
+            setGuests(value);
+        }
+    }
+
     return (
         <header>
+            <h1 className="book-text">Book a Table</h1>
             <section>
                 <form onSubmit={handleSubmit}>
                     <fieldset>
@@ -32,7 +50,9 @@ const BookingForm = (props) => {
                             <select id='book-time' value={times} onChange={(e) => setTimes (e.target.value)}>
                                 <option value="">Select a Time </option>
                                 {
-                                    props.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>} )
+                                    Array.isArray(props.availableTimes) && props.availableTimes.map(availableTimes => {
+                                        return <option key={availableTimes}>{availableTimes}</option>
+                                    })
                                 }
                             </select>
                         </div>
@@ -40,7 +60,7 @@ const BookingForm = (props) => {
                         {/*guests*/}
                         <div>
                             <label htmlFor='book-guests'>Number of Guests: </label>
-                            <input id='book-guests' min='1' value={guests} onChange={(e) => setGuests(e.target.value)} />
+                            <input id='book-guests' min='1' value={guests} onChange={handleGuestsChange} />
                         </div>
 
                         {/*occasion*/}
@@ -56,7 +76,7 @@ const BookingForm = (props) => {
 
                         {/*submit*/}
                         <div className='btnReceive'>
-                            <input aria-label='On Click' type='submit' value ={'Make Your Reservation'}/>
+                        <input aria-label='On Click' type='submit' value ={'Make Your Reservation'} disabled={!isFormValid}/>
                         </div>
                     </fieldset>
                 </form>

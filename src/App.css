@@ -132,7 +132,13 @@ button {
 }
 
 /* Booking form */
-
+.book-text {
+  color: #495E57;
+  font-size: 50px;
+  font-family: 'Markazi Text', serif;
+  margin-bottom: 0;
+  padding-left: 200px;
+}
 form, .confirm{
   padding: 50px 13%;
 }
@@ -168,6 +174,11 @@ input, label{
   font-size: 15px;
 }
 
+.btnReceive input[type="submit"]:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
 .confirm span{
   color: blue;
 }
@@ -199,7 +210,7 @@ input, label{
 }
 
 .specials-container h2 {
-  color: #000;
+  color: #495E57;
   font-family: 'Markazi Text', serif;
   font-size: 50px;
 }
@@ -342,7 +353,7 @@ input, label{
 }
 
 .main-text h2 {
-  color: black;
+  color: #495E57;
   font-size: 55px;
   font-family: 'Markazi Text', serif;
   margin-bottom: 0;
@@ -409,6 +420,7 @@ footer section{
 footer h3{
   font-size: 20px;
   font-family: 'Markazi Text', serif;
+  color: #495E57
 }
 
 footer ul{

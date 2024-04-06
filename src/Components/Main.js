@@ -4,6 +4,14 @@ import Header from './Header';
 import Booking from './Booking';
 import ConfirmedBooking from './Confirmed Booking';
 
+function fetchAPI(date) {
+    return ['12:00', '13:00', '14:00'];
+  }
+
+export function updateTimes(state, date) {
+    return {availableTimes: fetchAPI(new Date())}
+  }
+
 const Main = (props) => {
 
     const seedRandom = function(seed){
